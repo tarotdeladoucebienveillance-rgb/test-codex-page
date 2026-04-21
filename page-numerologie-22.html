@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numérologie à 22 nombres du Tarot | Josée Doucet</title>
+  <meta name="description" content="Découverte de la numérologie à 22 nombres du Tarot de Marseille : une lecture symbolique, structurée et profonde du parcours de vie." />
+  <style>
+    :root{
+      --page-bg: #f4efe8;
+      --page-panel: #fffaf7;
+      --shadow-page: 0 18px 40px rgba(53,84,73,.08);
+      --shadow: 0 8px 18px rgba(53,84,73,.10);
+      --shadow-soft: 0 12px 28px rgba(53,84,73,.08);
+      --txt: #355449;
+      --violet: #5D2555;
+      --titre: #2F4037;
+      --sauge: #97A897;
+      --beige: #FFFAF7;
+      --caption: #6A8369;
+    }
+
+    *{ box-sizing: border-box; }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.15)),
+        var(--page-bg);
+      color: var(--txt);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.85;
+    }
+
+    .page-shell{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 18px 56px;
+    }
+
+    .page-panel{
+      background: rgba(255,250,247,.72);
+      border: 1px solid rgba(151,168,151,.12);
+      border-radius: 26px;
+      padding: 18px 18px 34px;
+      box-shadow: var(--shadow-page);
+      backdrop-filter: blur(2px);
+    }
+
+    .page-header{
+      max-width: 820px;
+      margin: 6px auto 18px;
+      text-align: center;
+    }
+
+    .page-title{
+      margin: 8px 0 0;
+      color: #3b5d4f;
+      font-size: clamp(2rem, 3.3vw, 2.45rem);
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    .page-subtitle{
+      max-width: 680px;
+      margin: 14px auto 0;
+      color: #6b7d71;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    #numerologie-22-local{
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      color: var(--txt);
+      line-height: 1.85;
+    }
+
+    #numerologie-22-local p{
+      margin: 0 0 1.25em 0;
+      font-size: 1.06em;
+      line-height: 1.85;
+      color: var(--txt);
+    }
+
+    #numerologie-22-local h2{
+      margin: 2em 0 .8em 0;
+      text-align: center;
+      color: var(--titre);
+      font-size: clamp(1.3rem, 2.6vw, 1.62rem);
+      line-height: 1.35;
+    }
+
+    #numerologie-22-local .h2-gauche{
+      text-align: left;
+    }
+
+    #numerologie-22-local ul{
+      margin: 0;
+      padding-left: 1.25em;
+      line-height: 1.8;
+    }
+
+    #numerologie-22-local li{
+      margin-bottom: .6em;
+    }
+
+    #numerologie-22-local strong{
+      color: var(--txt);
+      font-weight: 700;
+    }
+
+    #numerologie-22-local em{
+      color: var(--violet);
+    }
+
+    #numerologie-22-local a{
+      color: var(--violet);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    #numerologie-22-local a:hover{
+      opacity: .9;
+    }
+
+    #numerologie-22-local a:focus-visible,
+    #numerologie-22-local button:focus-visible,
+    #numerologie-22-local [tabindex]:focus-visible{
+      outline: 3px solid rgba(93,37,85,.35);
+      outline-offset: 3px;
+      border-radius: 14px;
+    }
+
+    #numerologie-22-local .intro-numerologie-22{
+      max-width: 760px;
+      margin: 34px auto 24px auto;
+      padding: 0 12px;
+      font-size: 1.13rem;
+      line-height: 1.95;
+    }
+
+    #numerologie-22-local .hero-figure{
+      max-width: 720px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    #numerologie-22-local .hero-figure img{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(93,37,85,.08), 0 1px 4px rgba(0,0,0,.06);
+    }
+
+    #numerologie-22-local figcaption{
+      margin-top: 10px;
+      text-align: center;
+      color: var(--caption);
+      font-size: .96rem;
+      line-height: 1.7;
+    }
+
+    #numerologie-22-local .encart-premium{
+      margin: 1.8em 0;
+      padding: 1.25em 1.55em;
+      border-radius: 18px;
+      border-left: 4px solid rgba(151,168,151,.92);
+      background: linear-gradient(
+        180deg,
+        rgba(253,235,219,.58) 0%,
+        rgba(239,209,178,.50) 55%,
+        rgba(151,168,151,.58) 100%
+      );
+      box-shadow: var(--shadow);
+    }
+
+    #numerologie-22-local .encart-premium p:last-child{
+      margin-bottom: 0;
+    }
+
+    #numerologie-22-local .encart-premium.encart-peche{
+      border-left: 4px solid rgba(255,187,70,.88);
+      background: linear-gradient(
+        180deg,
+        rgba(253,235,219,.82) 0%,
+        rgba(255,250,247,.94) 58%,
+        rgba(255,187,70,.12) 100%
+      );
+    }
+
+    #numerologie-22-local .bloc-centre{
+      margin: 0 auto 1.9em auto;
+      text-align: center;
+    }
+
+    #numerologie-22-local .video-std{
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(53,84,73,.14);
+      background: #000;
+    }
+
+    #numerologie-22-local .txt-italique-centre{
+      margin: 34px 0;
+      text-align: center;
+      font-style: italic;
+      color: var(--txt);
+    }
+
+    #numerologie-22-local .txt-italique-centre-soft{
+      margin: 18px 0 0;
+      text-align: center;
+      font-style: italic;
+      color: var(--caption);
+    }
+
+    #numerologie-22-local .faq-simple p{
+      margin-bottom: 1em;
+    }
+
+    #numerologie-22-local .faq-simple p:last-child{
+      margin-bottom: 0;
+    }
+
+    #numerologie-22-local .cta-encart{
+      max-width: 720px;
+      margin: 2.1em auto 0;
+      text-align: center;
+    }
+
+    #numerologie-22-local .cta-texte{
+      margin: 0 0 18px 0;
+    }
+
+    #numerologie-22-local .cta-liens{
+      margin: 0 0 24px 0;
+      text-align: center;
+      font-size: 1em;
+      line-height: 1.85;
+    }
+
+    #numerologie-22-local .cta-liens a{
+      font-weight: 600;
+    }
+
+    #numerologie-22-local .bouton-rdv-amoureux{
+      display: inline-block;
+      padding: .82em 1.8em;
+      border-radius: 999px;
+      border: 1px solid rgba(151,168,151,.95);
+      background: var(--sauge);
+      color: var(--beige);
+      font-weight: 700;
+      font-size: 1.04em;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(151,168,151,.32);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    #numerologie-22-local .bouton-rdv-amoureux:hover{
+      background: var(--violet);
+      color: var(--beige);
+      box-shadow: 0 8px 20px rgba(93,37,85,.18);
+      transform: translateY(-1px);
+    }
+
+    #numerologie-22-local .phrase-finale-centree{
+      text-align: center;
+      margin: 28px auto 0;
+      max-width: 760px;
+      font-size: 1.08em;
+      line-height: 1.85;
+      color: var(--txt);
+    }
+
+    .page-footer-note{
+      max-width: 760px;
+      margin: 28px auto 0;
+      text-align: center;
+      color: #7a8a80;
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px){
+      .page-shell{
+        padding: 18px 10px 34px;
+      }
+
+      .page-panel{
+        border-radius: 18px;
+        padding: 10px 8px 26px;
+      }
+
+      .page-title{
+        font-size: clamp(1.7rem, 8vw, 2.1rem);
+      }
+
+      .page-subtitle{
+        font-size: .97rem;
+      }
+
+      #numerologie-22-local{
+        padding: 0 .95rem;
+      }
+
+      #numerologie-22-local p{
+        font-size: 1.02em;
+      }
+
+      #numerologie-22-local .intro-numerologie-22{
+        margin: 28px auto 22px auto;
+        font-size: 1.07rem;
+        line-height: 1.9;
+      }
+
+      #numerologie-22-local .encart-premium{
+        padding: 1.05em 1.15em;
+      }
+
+      #numerologie-22-local .txt-italique-centre{
+        margin: 26px 0;
+      }
+
+      #numerologie-22-local .cta-encart{
+        margin: 1.9em auto 0;
+      }
+
+      #numerologie-22-local .cta-liens{
+        font-size: .98em;
+        margin: 0 0 22px 0;
+      }
+
+      #numerologie-22-local .phrase-finale-centree{
+        font-size: 1.04em;
+        margin: 24px auto 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="page-panel">
+      <header class="page-header">
+        <h1 class="page-title">Numérologie à 22 nombres du Tarot | Josée Doucet</h1>
+      </header>
+
+      <div id="numerologie-22-local">
+
+        <p class="intro-numerologie-22">
+          Je pratique la <strong>numérologie à 22 nombres du Tarot</strong>, et non la numérologie classique à 9 nombres.
+          Parfois appelée <em>numérologie du Tarot</em> ou <em>numérologie de l’âme</em>, cette approche s’appuie sur les
+          <strong>22 arcanes majeurs du Tarot de Marseille</strong> et propose une lecture vibratoire, structurée et profondément symbolique du parcours de vie.
+          Elle s’inscrit dans la lignée de
+          <a href="https://editionsdemortagne.com/auteurs/kris-hadar-3/" target="_blank" rel="noopener noreferrer">Kris Hadar</a>
+          et de l’enseignement transmis par
+          <a href="https://www.sebastien-michel.com/numerologie-tarot-techniques-avancees" target="_blank" rel="noopener noreferrer">Sébastien Michel</a>,
+          auprès duquel j’ai étudié.
+        </p>
+
+        <figure class="hero-figure">
+          <img
+            src="https://tarotdeladoucebienveillancejoseedoucet.ca/wp-content/uploads/2026/04/freepik_cabinet-detude-de-la-rena_2826376489-1.png"
+            alt="Cabinet d’étude Renaissance avec table gravée de nombres, livre ouvert et instruments symboliques pour une lecture de numérologie du Tarot à 22 nombres"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>
+            Un cabinet d’étude inspiré de la Renaissance pour évoquer la numérologie du Tarot à 22 nombres.
+          </figcaption>
+        </figure>
+
+        <div class="encart-premium encart-peche">
+          <p>
+            Ici, la lecture ne cherche pas à enfermer l’être dans une formule : elle cherche à en révéler les mouvements,
+            les passages, les élans profonds et les zones de maturation. La numérologie à 22 nombres ouvre un langage
+            symbolique où les nombres et les arcanes dialoguent avec finesse, lucidité et profondeur.
+          </p>
+        </div>
+
+        <h2>
+          La numérologie, miroir de soi
+        </h2>
+
+        <p>
+          La numérologie n’est pas une réponse toute faite, mais un <strong>outil de compréhension de soi</strong>.
+          Elle éclaire le chemin de vie, révèle les élans intérieurs, met en lumière certains défis de maturation
+          et aide à relire le parcours avec davantage de conscience.
+        </p>
+
+        <h2>
+          Une lecture symbolique en mouvement
+        </h2>
+
+        <p>
+          Cette vidéo d’ambiance évoque l’univers de la <strong>numérologie du Tarot à 22 nombres</strong>,
+          dans une atmosphère de cabinet d’étude, de contemplation et de lecture intérieure.
+        </p>
+
+        <section class="bloc-centre">
+          <video
+            class="video-std"
+            src="https://tarotdeladoucebienveillancejoseedoucet.ca/wp-content/uploads/2026/04/Numerologie-22-nombres.mp4"
+            controls
+            preload="metadata"
+            playsinline>
+          </video>
+        </section>
+
+        <p>
+          Chaque nombre, de 1 à 22, porte une fréquence d’évolution.
+          Reliés à la date de naissance ou au prénom, ils éclairent les
+          <strong>missions d’âme</strong>, les <strong>appuis intérieurs</strong>,
+          les <strong>défis de maturation</strong> et certaines étapes charnières de l’existence.
+        </p>
+
+        <h2>
+          Pourquoi 22 nombres&nbsp;?
+        </h2>
+
+        <p>
+          Dans cette approche, le passage de <strong>9 à 22 nombres</strong> permet une lecture plus nuancée,
+          plus fine et plus riche en résonances symboliques. Reliés aux
+          <strong>22 arcanes majeurs du Tarot de Marseille</strong>, ces nombres offrent un langage plus visuel
+          pour comprendre les dynamiques de naissance, les potentiels intérieurs,
+          les défis d’évolution et les grandes étapes du chemin de vie.
+        </p>
+
+        <p>
+          Là où une lecture plus classique simplifie certains axes, la numérologie à 22 nombres ouvre davantage de subtilité.
+          Elle permet d’approcher l’être dans sa complexité, sans le réduire, en mettant en lumière ses appuis,
+          ses passages de transformation, ses appels profonds et les mouvements intérieurs qui traversent une existence.
+        </p>
+
+        <p class="txt-italique-centre">
+          La lecture à 22 nombres ouvre un dialogue entre ton parcours et les archétypes du Tarot.
+        </p>
+
+        <h2>
+          Une lecture rigoureuse et consciente
+        </h2>
+
+        <p>
+          Dans ma pratique, la numérologie à 22 nombres ne remplace jamais le libre arbitre.
+          Elle l’éclaire, l’accompagne et le rend plus conscient, dans une démarche respectueuse,
+          sans fatalisme et sans illusion de toute-puissance.
+        </p>
+
+        <p class="txt-italique-centre-soft">
+          Chaque nombre éclaire une étape, jamais une prison.
+        </p>
+
+        <h2 class="h2-gauche">
+          Bienfaits d’une telle lecture
+        </h2>
+
+        <div class="encart-premium">
+          <ul>
+            <li>Clarifier les grandes étapes d’incarnation</li>
+            <li>Mieux comprendre ses cycles, ses élans et ses passages intérieurs</li>
+            <li>Nommer certains défis avec plus de douceur et de conscience</li>
+            <li>Prendre des décisions plus alignées avec son chemin profond</li>
+          </ul>
+        </div>
+
+        <figure class="hero-figure">
+          <img
+            src="https://tarotdeladoucebienveillancejoseedoucet.ca/wp-content/uploads/2026/04/freepik_cabinet-detude-renaissanc_2826376465.png"
+            alt="Cabinet d’étude Renaissance avec table gravée de nombres et livre ouvert pour illustrer la numérologie du Tarot"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>
+            Un cabinet d’étude inspiré de la Renaissance, entre contemplation, symbolique et lecture intérieure.
+          </figcaption>
+        </figure>
+
+        <section class="faq-bloc" aria-labelledby="faq-num22">
+
+          <h2 id="faq-num22">
+            Foire aux questions
+          </h2>
+
+          <div class="encart-premium faq-simple">
+            <p>
+              <strong>Qu’est-ce que la numérologie à 22 nombres&nbsp;?</strong><br>
+              Une lecture symbolique reliée aux arcanes majeurs du Tarot, visant la compréhension de soi,
+              du parcours de vie et de certains mouvements intérieurs.
+            </p>
+
+            <p>
+              <strong>En quoi diffère-t-elle de la numérologie classique&nbsp;?</strong><br>
+              Au lieu de s’arrêter à 9 nombres, cette approche travaille avec <strong>22 nombres</strong> reliés
+              aux <strong>22 arcanes majeurs du Tarot de Marseille</strong>. Elle offre ainsi une lecture plus nuancée,
+              plus symbolique et plus visuelle du parcours de vie.
+            </p>
+
+            <p>
+              <strong>À qui s’adresse-t-elle&nbsp;?</strong><br>
+              À toute personne souhaitant mieux se comprendre, éclairer son chemin de vie
+              et avancer sans fatalisme.
+            </p>
+          </div>
+
+          <div class="encart-premium cta-encart">
+            <p class="cta-texte">
+              Il est des instants où l’on choisit de se rencontrer soi-même…
+              dans un espace de vérité, de douceur et de présence.
+            </p>
+
+            <p class="cta-liens">
+              Si tu souhaites d’abord découvrir <a href="https://tarotdeladoucebienveillancejoseedoucet.ca/a-propos-josee-doucet/">mon parcours</a>
+              ou consulter <a href="https://tarotdeladoucebienveillancejoseedoucet.ca/tarifs-en-tarot/">mes honoraires</a>,
+              tu peux le faire en toute simplicité avant de réserver.
+            </p>
+
+            <a class="bouton-rdv-amoureux" href="https://meet.brevo.com/josee-doucet">
+              Je réserve mon moment
+            </a>
+          </div>
+
+          <p class="phrase-finale-centree">
+            Si quelque chose en toi s’ouvre en lisant ces mots, fais-lui confiance.
+          </p>
+
+        </section>
+      </div>
+
+      <p class="page-footer-note">
+        Version autonome recréée pour test local, avec un habillage plus proche de la page originale.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
