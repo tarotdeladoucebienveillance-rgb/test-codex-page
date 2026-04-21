@@ -12,18 +12,21 @@
       --shadow-page: 0 18px 40px rgba(53,84,73,.08);
       --shadow: 0 8px 18px rgba(53,84,73,.10);
       --shadow-soft: 0 12px 28px rgba(53,84,73,.08);
-      --txt: #355449;
+      --txt: #2f4a40;
       --violet: #5D2555;
-      --titre: #2F4037;
+      --titre: #2a3b33;
       --sauge: #97A897;
       --beige: #FFFAF7;
-      --caption: #6A8369;
+      --caption: #587165;
+      --focus-ring: rgba(93,37,85,.42);
+      --content-max: 760px;
     }
 
     *{ box-sizing: border-box; }
 
     html{
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body{
@@ -34,6 +37,7 @@
       color: var(--txt);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.85;
+      text-rendering: optimizeLegibility;
     }
 
     .page-shell{
@@ -84,17 +88,20 @@
 
     #numerologie-22-local p{
       margin: 0 0 1.25em 0;
-      font-size: 1.06em;
-      line-height: 1.85;
+      font-size: clamp(1.04rem, 1.2vw, 1.12rem);
+      line-height: 1.9;
       color: var(--txt);
+      max-width: var(--content-max);
+      margin-inline: auto;
     }
 
     #numerologie-22-local h2{
-      margin: 2em 0 .8em 0;
+      margin: 2.3em auto .9em;
       text-align: center;
       color: var(--titre);
       font-size: clamp(1.3rem, 2.6vw, 1.62rem);
       line-height: 1.35;
+      max-width: var(--content-max);
     }
 
     #numerologie-22-local .h2-gauche{
@@ -103,8 +110,8 @@
 
     #numerologie-22-local ul{
       margin: 0;
-      padding-left: 1.25em;
-      line-height: 1.8;
+      padding-left: 1.35em;
+      line-height: 1.85;
     }
 
     #numerologie-22-local li{
@@ -133,17 +140,26 @@
     #numerologie-22-local a:focus-visible,
     #numerologie-22-local button:focus-visible,
     #numerologie-22-local [tabindex]:focus-visible{
-      outline: 3px solid rgba(93,37,85,.35);
+      outline: 3px solid var(--focus-ring);
       outline-offset: 3px;
       border-radius: 14px;
     }
 
     #numerologie-22-local .intro-numerologie-22{
-      max-width: 760px;
+      max-width: var(--content-max);
       margin: 34px auto 24px auto;
       padding: 0 12px;
       font-size: 1.13rem;
       line-height: 1.95;
+    }
+
+
+    #numerologie-22-local :where(img, video){
+      height: auto;
+    }
+
+    #numerologie-22-local .faq-bloc{
+      margin-top: 1.2em;
     }
 
     #numerologie-22-local .hero-figure{
@@ -169,8 +185,9 @@
     }
 
     #numerologie-22-local .encart-premium{
-      margin: 1.8em 0;
-      padding: 1.25em 1.55em;
+      max-width: var(--content-max);
+      margin: 2em auto;
+      padding: 1.35em 1.6em;
       border-radius: 18px;
       border-left: 4px solid rgba(151,168,151,.92);
       background: linear-gradient(
@@ -197,7 +214,8 @@
     }
 
     #numerologie-22-local .bloc-centre{
-      margin: 0 auto 1.9em auto;
+      max-width: 720px;
+      margin: 0 auto 2.1em auto;
       text-align: center;
     }
 
@@ -209,6 +227,7 @@
       border-radius: 16px;
       box-shadow: 0 10px 24px rgba(53,84,73,.14);
       background: #000;
+      aspect-ratio: 16 / 9;
     }
 
     #numerologie-22-local .txt-italique-centre{
@@ -256,7 +275,8 @@
 
     #numerologie-22-local .bouton-rdv-amoureux{
       display: inline-block;
-      padding: .82em 1.8em;
+      min-height: 44px;
+      padding: .85em 1.8em;
       border-radius: 999px;
       border: 1px solid rgba(151,168,151,.95);
       background: var(--sauge);
@@ -278,14 +298,14 @@
     #numerologie-22-local .phrase-finale-centree{
       text-align: center;
       margin: 28px auto 0;
-      max-width: 760px;
+      max-width: var(--content-max);
       font-size: 1.08em;
       line-height: 1.85;
       color: var(--txt);
     }
 
     .page-footer-note{
-      max-width: 760px;
+      max-width: var(--content-max);
       margin: 28px auto 0;
       text-align: center;
       color: #7a8a80;
@@ -295,12 +315,12 @@
 
     @media (max-width: 640px){
       .page-shell{
-        padding: 18px 10px 34px;
+        padding: 14px 8px 30px;
       }
 
       .page-panel{
         border-radius: 18px;
-        padding: 10px 8px 26px;
+        padding: 14px 10px 24px;
       }
 
       .page-title{
@@ -312,11 +332,12 @@
       }
 
       #numerologie-22-local{
-        padding: 0 .95rem;
+        padding: 0 .85rem;
       }
 
       #numerologie-22-local p{
-        font-size: 1.02em;
+        font-size: 1.01rem;
+        line-height: 1.86;
       }
 
       #numerologie-22-local .intro-numerologie-22{
@@ -326,7 +347,9 @@
       }
 
       #numerologie-22-local .encart-premium{
-        padding: 1.05em 1.15em;
+        margin: 1.55em auto;
+        padding: 1.05em 1.1em;
+        border-radius: 14px;
       }
 
       #numerologie-22-local .txt-italique-centre{
@@ -339,7 +362,13 @@
 
       #numerologie-22-local .cta-liens{
         font-size: .98em;
-        margin: 0 0 22px 0;
+        margin: 0 0 20px 0;
+      }
+
+      #numerologie-22-local .bouton-rdv-amoureux{
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
       }
 
       #numerologie-22-local .phrase-finale-centree{
@@ -408,9 +437,10 @@
           dans une atmosphère de cabinet d’étude, de contemplation et de lecture intérieure.
         </p>
 
-        <section class="bloc-centre">
+        <section class="bloc-centre" aria-label="Vidéo d’ambiance sur la numérologie du Tarot à 22 nombres">
           <video
             class="video-std"
+            aria-label="Vidéo d’ambiance du cabinet d’étude autour de la numérologie à 22 nombres"
             src="https://tarotdeladoucebienveillancejoseedoucet.ca/wp-content/uploads/2026/04/Numerologie-22-nombres.mp4"
             controls
             preload="metadata"
@@ -525,7 +555,7 @@
               tu peux le faire en toute simplicité avant de réserver.
             </p>
 
-            <a class="bouton-rdv-amoureux" href="https://meet.brevo.com/josee-doucet">
+            <a class="bouton-rdv-amoureux" href="https://meet.brevo.com/josee-doucet" aria-label="Réserver un moment d’accompagnement">
               Je réserve mon moment
             </a>
           </div>
